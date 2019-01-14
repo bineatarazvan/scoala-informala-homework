@@ -1,9 +1,9 @@
-//import org.imgscalr.Scalr;
-
-//import javax.imageio.ImageIO;
-//import java.awt.image.BufferedImage;
-//import java.io.IOException;
-//import java.util.Scanner;
+/**
+ * In this class we have acces a image from our computer
+ * we roate the image to be streight and we save the image like that
+ *Created 14Ian 2019
+ * @RazvanB
+ */
 
 import org.imgscalr.Scalr;
 

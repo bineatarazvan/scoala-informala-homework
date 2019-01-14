@@ -1,3 +1,8 @@
+/**
+ * In this class we have the main method for the class FootballPlayers
+ *Created 14Ian 2019
+ * @RazvanB
+ */
 import java.util.ArrayList;
 
 public class Main {
