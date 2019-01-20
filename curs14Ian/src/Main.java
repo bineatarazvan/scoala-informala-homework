@@ -65,6 +65,8 @@ import java.util.Scanner;
  * - try to use best practices in OOP; extra kudos to you if you program against interfaces (e.g. the type of the variable pointing to the list should be List<MyClass>, but the instance's type should be ArrayList<MyClass>)
  *
  * - try to access methods in a polymorphic fashion where suitable
+ * @author Bineata Razvan
+ * @20ian
  */
 
 
