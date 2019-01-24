@@ -1,3 +1,8 @@
+/**
+ * This is parent class and here we have made the acces method for the varialble of the class
+ *Created Ian 2019
+ * @Razvan
+ */
 import java.util.ArrayList;
 
 public class Book {
