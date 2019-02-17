@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -15,23 +16,29 @@ public class InputDataValidation {
     private static int mm;
 
     public static void main(String[] args) {
+        hh=3;
+//        System.out.println(String.format("%02d", 12));
         Scanner keyboard = new Scanner(System.in);
         System.out.println("What time is it?");
-        hh = keyboard.nextInt();
-        mm = keyboard.nextInt();
-        checkFormatTime(hh,mm);
-    }
+
+        try{
+            hh = keyboard.nextInt();
+            mm = keyboard.nextInt();
+            checkFormatTime(hh,mm);
+        }catch (InputMismatchException e){
+            System.out.println("exit! Invalid input!");
+        }
+        }
+
     public static void checkFormatTime(int h, int m){
         if((h>=0)&&(h<=24)&&(m>=0)&&(m<=60)){
-            System.out.println(" The time is " +((hh < 10 ? "0" : "") + hh)+ ":" +((mm < 10 ? "0" : "") + mm)+ " now.");
-            //String.format("%02d", hh);  de intrebat de ce nu merge
+//            System.out.println(" The time is " +((hh < 10 ? "0" : "") + hh)+ ":" +((mm < 10 ? "0" : "") + mm)+ " now.");
+            System.out.println(String.format("%02d:%02d", hh,mm));  //de intrebat de ce nu merge
             //System.out.print("%02d",hh);
         }
         else{
             System.out.println(" Incorrect time!");
         }
-
-
     }
 
 }
