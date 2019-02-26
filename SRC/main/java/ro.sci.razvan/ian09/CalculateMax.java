@@ -24,7 +24,6 @@ public class CalculateMax {
         int max= getMax(a,b);
         max = getMax(max,c);
         System.out.println(max);
-
     }
     public static int getMax(int firstNr, int secondNr) {
         if (firstNr > secondNr) {

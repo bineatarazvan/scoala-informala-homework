@@ -15,4 +15,15 @@ class FahrenheitToCelsiusConversionTest {
         Assertions.assertEquals(d, -15);
 
     }
+    @Test
+    void conversionTempFromFahrenheitToCelsius1() {
+        double d = f.conversionTempFromFahrenheitToCelsius(0);
+        Assertions.assertEquals(d, -17.77777777777778);
+    }
+    @Test
+    void conversionTempFromFahrenheitToCelsius2() {
+        double d = f.conversionTempFromFahrenheitToCelsius(99);
+        Assertions.assertEquals(d, 37.22222222222222);
+
+    }
 }

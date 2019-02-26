@@ -10,18 +10,13 @@ class InputDataValidationTest {
     InputDataValidation inputDataValidation = new InputDataValidation();
 
     @Test
-    void isTimeFormatCorect() {
-        boolean time = inputDataValidation.isTimeFormatCorect(11,11);
-        Assertions.assertEquals(time,true);
+     public  void timeFormatCorect(){
+        String timp = inputDataValidation.timeFormatCorect(4,4);
+        Assertions.assertEquals( "04:04",timp);
     }
     @Test
-    void isTimeFormatIncoretFromatMinute() {
-        boolean time = inputDataValidation.isTimeFormatCorect(24,60);
-        Assertions.assertEquals(time,false);
-    }
-    void isTimeFormatIncoretFromatHour() {
-        boolean time = inputDataValidation.isTimeFormatCorect(25,58);
-        Assertions.assertEquals(time,false);
-
+    public  void timeFormatIncorect1() {
+        assertThrows(IllegalArgumentException.class,
+                ()-> { inputDataValidation.timeFormatCorect(24, 4);});
     }
 }

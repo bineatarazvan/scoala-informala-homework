@@ -1,6 +1,6 @@
 package ro.sci.razvan.ian09;
 
-import java.util.Scanner;
+        import java.util.Scanner;
 
 /**
  *
@@ -13,27 +13,25 @@ import java.util.Scanner;
  * @RazvanB
  */
 public class InputDataValidation {
-    private static int hh;
-    private static int mm;
 
     public static void main(String[] args) {
+        int hh;
+        int mm;
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("What time is it?");
+        System.out.println("What time is it? pls set hour");
         hh = keyboard.nextInt();
+        System.out.println("pls set minute");
         mm = keyboard.nextInt();
-        isTimeFormatCorect(hh,mm);
+        String a = timeFormatCorect(hh,mm);
+        System.out.println(a);
     }
-    public static boolean isTimeFormatCorect(int h, int m){
-        if((h>=0)&&(h<=24)&&(m>=0)&&(m<=59)){
-//            System.out.println(" The time is " +((hh < 10 ? "0" : "") + hh)+ ":" +((mm < 10 ? "0" : "") + mm)+ " now.");
-            System.out.println(String.format("%02d:%02d", hh,mm));  //de intrebat de ce nu merge
-            //System.out.print("%02d",hh);
-            return true;
+    public static String timeFormatCorect(int h, int m) {
+        if ((h < 0) || (h >= 24) || (m < 0) || (m > 59)) {
+            throw new IllegalArgumentException("Erroare!!! ");
         }
-        else{
-            System.out.println(" Incorrect time!");
-            return false;
-        }
+        String hourStr = h < 10 ? "0" + h : String.valueOf(h);
+        String minStr = m < 10 ? "0" + h : String.valueOf(m);
+        return hourStr + ":" + minStr;
     }
-
 }
+
