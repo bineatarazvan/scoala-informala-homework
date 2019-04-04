@@ -28,6 +28,5 @@ public class Main {
         JDBCUtil.selectAllRecordFromClassesWhereTitle("INTRO");
 
         JDBCUtil.selectAllRecordFromClassesWhereDept("COS");
-
     }
 }
