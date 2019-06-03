@@ -1,5 +1,5 @@
-import java.sql.SQLOutput;
-import java.util.InputMismatchException;
+package ro.sci.razvan.ian09;
+
 import java.util.Scanner;
 
 /**
@@ -18,23 +18,17 @@ import java.util.Scanner;
  */
 
 public class FahrenheitToCelsiusConversion {
-   private static double celsiusDegree;
+    private static double celsiusDegree;
 
     public static void main(String[] args) {
-
-        try{
-            Scanner keyboard = new Scanner(System.in);
-            System.out.println("Give a value for temperature in F degree");
-            double fahrenheitDegree =keyboard.nextDouble();
-            System.out.println("Your body temperature in Celsius degrees is "+
-                    conversionTempFromFahrenheitToCelsius(fahrenheitDegree));
-            if(conversionTempFromFahrenheitToCelsius(fahrenheitDegree)>37){
-                System.out.println("You are ill!");
-            }
-        }catch (InputMismatchException e){
-            System.out.println("exit inavlid input");
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Give a value for temperature in F degree");
+        double fahrenheitDegree =keyboard.nextDouble();
+        System.out.println("Your body temperature in Celsius degrees is "+
+                conversionTempFromFahrenheitToCelsius(fahrenheitDegree));
+        if(conversionTempFromFahrenheitToCelsius(fahrenheitDegree)>37){
+            System.out.println("You are ill!");
         }
-
     }
 
     public static double conversionTempFromFahrenheitToCelsius(double F){
